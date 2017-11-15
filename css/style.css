@@ -1310,7 +1310,7 @@ input[type=password]:focus + label {
 	text-decoration: underline;
 }
 
-/* ----------------Страница каталога--------------------- */
+/* ----------Страница каталога---------------- */
 
 .button-user {
 	color: #ffffff;
@@ -1637,7 +1637,7 @@ input[type=password]:focus + label {
 	background: #1c4f80;
 }
 
-/*Жирность*/
+/* Жирность */
 
 .fat-wrapper {
 	position: relative;
@@ -1761,7 +1761,7 @@ input[type=password]:focus + label {
     display: block;
 }
 
-/* Кнопка фильтра*/
+/* Кнопка фильтра */
 
 .filter-button {
 	width: 144px;
