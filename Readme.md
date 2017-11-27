@@ -1,7 +1,7 @@
 ﻿# Личный проект «Глейси»
 
-* Студент: [Денис Лазарев](https://up.htmlacademy.ru/htmlcss/19/user/401603).
-* Наставник: [Без наставника].
+* Студент: [Денис Лазарев](https://up.htmlacademy.ru/htmlcss/18/user/401603).
+* Наставник: [Николай Маркелов](https://htmlacademy.ru/profile/id504499).
 
 ---
 
