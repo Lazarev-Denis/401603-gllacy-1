@@ -397,6 +397,7 @@ li .active-nav {
 
 .button-search {
     display: flex;
+    position: relative;
     width: 32px;
     height: 32px;
     background-color: rgba(255,255,255,.2);
@@ -420,14 +421,20 @@ li .active-nav {
 }
 
 .search-window {
-    width: 342px;
+    display: none;
+    transform: scale(0.8);
+}
+
+.button-search:hover + .search-window,
+.button-search:focus + .search-window,
+.search-window:hover {
+    display: block;
     position: absolute;
+    width: 342px;
     right: 0px;
     padding-top: 10px;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
     transition: all 150ms ease-out;
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
     border-radius: 10px;
@@ -435,21 +442,14 @@ li .active-nav {
 }
 
 .search-window-content {
+    display: block;
+    position: relative;
+    visibility: visible;
     height: 60px;
     background-color: rgba(248,247,244,1);
     padding: 15px;
     padding-top: 1px;
     border-radius: 10px;
-}
-
-.button-search:hover + .search-window,
-.button-search:focus + .search-window,
-.search-window:hover,
-.search-window:focus-within {
-    visibility: visible;
-    pointer-events: all;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .input-search {
@@ -470,10 +470,6 @@ li .active-nav {
 .input-search:hover {
     padding: 9px 13px;
     border: 2px solid rgba(154,154,154,.52);
-}
-
-.search-window-content {
-    position: relative;
 }
 
 .label-search {
@@ -524,17 +520,22 @@ li .active-nav {
 }
 
 .user-window {
+    display: none;
+    transform: scale(0.8);
+}
+
+.button-user:hover + .user-window,
+.button-user:focus + .user-window,
+.user-window:hover {
     display: flex;
     justify-content: space-between;
     position: absolute;
     right: 0px;
     padding-top: 10px;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
     transition: all 150ms ease-out;
-    max-width: 342px;
+    width: 278px;
     box-shadow: 0 20px 20px rgba(0,0,0,.4);
     border-radius: 10px;
     z-index: 20;
@@ -562,16 +563,6 @@ li .active-nav {
     height: 45px;
     margin-top: 20px;
     margin-left: 20px;
-}
-
-.button-user:hover + .user-window,
-.button-user:focus + .user-window,
-.user-window:hover,
-.user-window:focus-within {
-    visibility: visible;
-    pointer-events: all;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .label-email {
@@ -936,6 +927,7 @@ li .active-nav {
     max-width: 256px;
     min-height: 40px;
     margin-left: 5px;
+    margin-top: 1px;
 }
 
 .catalog-image-container .catalog-ice {
@@ -1261,7 +1253,7 @@ a.tel {
 .main-footer {
     display: flex;
     width: 1146px;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1274,12 +1266,11 @@ a.tel {
     margin: 0 auto;
     margin-left: -9px;
     padding: 0;
+    padding-right: 236px;
 }
 
 .social-button {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 32px;
     height: 32px;
     margin-top: 37px;
@@ -1298,6 +1289,7 @@ a.tel {
     display: flex;
     align-content: space-between;
     padding: 0;
+    padding-right: 236px;
     list-style-type: none;
     margin-left: 4px;
     margin-top: 32px;
@@ -1429,14 +1421,19 @@ a.tel {
 }
 
 .basket-table-window {
+    display: none;
+    transform: scale(0.8);
+}
+
+.button-full-basket:hover + .basket-table-window,
+.button-full-basket:focus + .basket-table-window,
+.basket-table-window:hover {
     display: flex;
     position: absolute;
     right: 0px;
     padding-top: 10px;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
+    transform: scale(1);
+    opacity: 1;
     transition: all 150ms ease-out;
     width: 540px;
     height: 215px;
@@ -1456,16 +1453,6 @@ a.tel {
     width: 516px;
     height: 230px;
     margin-left: 24px;
-}
-
-.button-full-basket:hover + .basket-table-window,
-.button-full-basket:focus + .basket-table-window,
-.basket-table-window:hover,
-.basket-table-window:focus-within {
-    visibility: visible;
-    pointer-events: all;
-    transform: scale(1);
-    opacity: 1;
 }
 
 .head-basket a {
@@ -1604,7 +1591,6 @@ a.tel {
     width: 860px;
     padding: 0;
     margin: 0;
-    outline: 1px solid orange;
 }
 
 .filter-row2 {
@@ -1616,10 +1602,8 @@ a.tel {
 }
 
 .filter-form fieldset {
-    width: 100%;
     margin: 0;
     padding: 0;
-    padding-left: 0px;
     margin-top: -2px;
     border: none;
 }
@@ -1765,10 +1749,10 @@ select.sorting::-ms-expand {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 404px;
+    width: 400px;
     height: 36px;
-    padding: 0px 0px 0px 10px;
-    margin-left: 19px;
+    padding: 0px 0px 0px 14px;
+    margin-left: 16px;
     margin-top: -3px;
     background: rgba(255,255,255,.2);
     border-radius: 18px;
@@ -1807,7 +1791,7 @@ select.sorting::-ms-expand {
 }
 
 .ten span {
-    margin-left: 47px;
+    margin-left: 45px;
 }
 
 .thirty span {
@@ -1815,7 +1799,7 @@ select.sorting::-ms-expand {
 }
 
 .more-thirty span {
-    margin-left: 45px;
+    margin-left: 47px;
 }
 
 .radio-container input {
@@ -1903,7 +1887,7 @@ select.sorting::-ms-expand {
 }
 
 .box-sugar {
-    margin-left: 10px;
+    margin-left: 9px;
 }
 
 .box-fruit {
@@ -1911,7 +1895,7 @@ select.sorting::-ms-expand {
 }
 
 .box-syrup {
-    margin-left: 17px;
+    margin-left: 18px;
 }
 
 .box-jam {
@@ -1961,7 +1945,7 @@ select.sorting::-ms-expand {
 /* Кнопка фильтра*/
 
 .filter-button {
-    width: 170px;
+    width: 146px;
     height: 34px;
     font-size: 16px;
     line-height: 18px;
@@ -1971,9 +1955,9 @@ select.sorting::-ms-expand {
     border: 2px solid white;
     border-radius: 20px;
     margin-top: 24px;
-    margin-right: 5px;
+    margin-left: 13px;
     padding-top: 2px;
-    padding-left: 2px;
+    padding-left: 7px;
 }
 
 .filter-button:hover {
@@ -2028,7 +2012,7 @@ select.sorting::-ms-expand {
     padding: 0px;
     padding-bottom: 19px;
     margin-left: 8px;
-    margin-top: 35px;
+    margin-top: 33px;
     list-style-type: none;
     font-size: 16px;
     line-height: 18px;
